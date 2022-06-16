@@ -1,0 +1,68 @@
+.hr-blue-5 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border-top: 10px solid #2b3f4a;
+}
+header {
+    background-color: #2698d6;
+    width: 100%;
+    margin-top: 30px;
+  }
+  header li {
+    list-style: none;
+  }
+  header li i {
+    margin-right: 10px;
+    margin-top: 20px;
+    font-size: 25px;
+    color: white;
+    
+  }
+  .card-body a{
+    color: black;
+}
+.card-body a h5{
+    font-size: 15px;
+}
+.schedule-scroll{
+    overflow-y: scroll;
+   
+}
+.schedule-table{
+   
+    width: inherit;
+    height: 500px;
+}
+body ::-webkit-scrollbar{
+    width: 10px;
+}
+body ::-webkit-scrollbar-thumb{
+    background-color: #c63123;
+    border-radius: 10px;
+}
+.search-box[data-v-7a40b944] {
+    width: 50%;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+input[type=text][data-v-7a40b944] {
+    width: 100%;
+    font-size: 17px;
+    border-radius: 16px;
+    border: 1px solid #bdbdbd;
+    padding: 0 30px 0 14px;
+    margin: 0;
+}
+button[data-v-7a40b944] {
+    color: #bdbdbd;
+    background: none;
+    outline: none;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mt-lg-0" href="#">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+              height="15"
+              alt="MDB Logo"
+              loading="lazy"
+            />
+          </a>
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lichtrinh.html">LỊCH TRÌNH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LIÊN HỆ</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+          <!-- Icon -->
+          <a class="text-reset me-3" href="#">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+
+          <!-- Notifications -->
+          <div class="dropdown">
+            <a
+              class="text-reset me-3 dropdown-toggle hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell"></i>
+              <span class="badge rounded-pill badge-notification bg-danger"
+                >1</span
+              >
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">Some news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Avatar -->
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuAvatar"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                class="rounded-circle"
+                height="25"
+                alt="Black and White Portrait of a Man"
+                loading="lazy"
+              />
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuAvatar"
+            >
+              <li>
+                <a class="dropdown-item" href="thongtincanhan.html"
+                  >Thông tin cá nhân</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Đăng ký hãng xe</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Đăng xuất</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right elements -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="find-a-doctor__quick-search">
+            <div>
+              <h4 style="color: #1377bc">MUA VÉ XE KHÁCH TRỰC TUYẾN</h4>
+              <form class="ng-pristine ng-valid">
+                <div
+                  class="form-group form__medical-speciality"
+                  style="margin-top: 20px"
+                >
+                  <!-- <h5 style="color: #00204a">Chuyên khoa</h5> -->
+                  <div class="btn-group" style="width: 100%">
+                    <select
+                      id="speciality"
+                      class="form-control ng-pristine ng-untouched ng-valid ng-not-empty"
+                      ng-init="selectedSpeciality='0'"
+                      ng-model="selectedSpeciality"
+                      ng-change="searchDoctors()"
+                    >
+                      <option
+                        style="font-size: 14px"
+                        value="0"
+                        selected="selected"
+                      >
+                        Chọn nơi đi
+                      </option>
+                      <option disabled="" style="font-size: 14px" value="669">
+                        Chuyên khoa trị liệu thần kinh cột sống ACC
+                      </option>
+                      <option disabled="" style="font-size: 14px" value="665">
+                        Dịch vụ COVID-19
+                      </option>
+                      <option style="font-size: 14px" value="666">
+                        &nbsp;&nbsp;Khoa điều trị COVID-19
+                      </option>
+                      <option disabled="" style="font-size: 14px" value="5">
+                        Các Chuyên Khoa Nội
+                      </option>
+                      <option style="font-size: 14px" value="6">
+                        &nbsp;&nbsp;Khoa Cấp Cứu
+                      </option>
+                      <option style="font-size: 14px" value="14">
+                        &nbsp;&nbsp;Khoa Gây Mê Hồi Sức
+                      </option>
+                      <option style="font-size: 14px" value="10">
+                        &nbsp;&nbsp;Chuyên Khoa Tim
+                      </option>
+                      <option style="font-size: 14px" value="16">
+                        &nbsp;&nbsp;Khoa Tâm lý Lâm Sàng
+                      </option>
+                      <option style="font-size: 14px" value="11">
+                        &nbsp;&nbsp;Khoa Da Liễu
+                      </option>
+                      <option style="font-size: 14px" value="32">
+                        &nbsp;&nbsp;Khoa Dinh Dưỡng
+                      </option>
+                      <option style="font-size: 14px" value="585">
+                        &nbsp;&nbsp;Trung tâm Điều trị &amp; Chăm sóc Da bằng
+                        Laser FV
+                      </option>
+                      <option style="font-size: 14px" value="12">
+                        &nbsp;&nbsp;Chuyên Khoa Tiêu Hóa &amp; Gan Mật
+                      </option>
+                      <option style="font-size: 14px" value="7">
+                        &nbsp;&nbsp;Khoa Nội Đa Khoa
+                      </option>
+                      <option style="font-size: 14px" value="13">
+                        &nbsp;&nbsp;Trung Tâm Điều Trị Ung Thư Hy Vọng
+                      </option>
+                      <option style="font-size: 14px" value="9">
+                        &nbsp;&nbsp;Khoa Nội
+                      </option>
+                      <option style="font-size: 14px" value="8">
+                        &nbsp;&nbsp;Khoa Nhi và Nhi sơ sinh
+                      </option>
+                      <option style="font-size: 14px" value="15">
+                        &nbsp;&nbsp;Trung tâm Điều trị Đau
+                      </option>
+                      <option style="font-size: 14px" value="663">
+                        &nbsp;&nbsp;Khoa Y Học Cổ Truyền
+                      </option>
+                      <option disabled="" style="font-size: 14px" value="28">
+                        Các Dịch Vụ Hỗ Trợ
+                      </option>
+                      <option style="font-size: 14px" value="29">
+                        &nbsp;&nbsp;Khoa Chẩn Đoán Hình Ảnh
+                      </option>
+                      <option style="font-size: 14px" value="31">
+                        &nbsp;&nbsp;Khoa Xét Nghiệm &amp; Ngân Hàng Máu
+                      </option>
+                      <option style="font-size: 14px" value="30">
+                        &nbsp;&nbsp;Khoa Y Học Hạt Nhân
+                      </option>
+                      <option style="font-size: 14px" value="33">
+                        &nbsp;&nbsp;Khoa Vật Lý Trị Liệu Và Phục Hồi Chức Năng
+                      </option>
+                      <option disabled="" style="font-size: 14px" value="17">
+                        Các chuyên Khoa Ngoại
+                      </option>
+                      <option style="font-size: 14px" value="19">
+                        &nbsp;&nbsp;Khoa Chấn Thương Chỉnh Hình
+                      </option>
+                      <option style="font-size: 14px" value="26">
+                        &nbsp;&nbsp;Viện Thẩm mỹ FV Lifestyle
+                      </option>
+                      <option style="font-size: 14px" value="18">
+                        &nbsp;&nbsp;Khoa Ngoại Tổng Quát
+                      </option>
+                      <option style="font-size: 14px" value="24">
+                        &nbsp;&nbsp;Khoa Nha &amp; Phẫu Thuật Hàm Mặt
+                      </option>
+                      <option style="font-size: 14px" value="27">
+                        &nbsp;&nbsp;Ngoại Thần Kinh Và Can Thiệp Nội Mạch Thần
+                        Kinh
+                      </option>
+                      <option style="font-size: 14px" value="21">
+                        &nbsp;&nbsp;Khoa Sản Phụ khoa Trung tâm điều trị bệnh lý
+                        tuyến vú
+                      </option>
+                      <option style="font-size: 14px" value="25">
+                        &nbsp;&nbsp;Khoa Mắt và Phẫu thuật khúc xạ
+                      </option>
+                      <option style="font-size: 14px" value="23">
+                        &nbsp;&nbsp;Khoa Tai Mũi Họng
+                      </option>
+                      <option style="font-size: 14px" value="22">
+                        &nbsp;&nbsp;Khoa Tiết Niệu &amp; Nam Khoa
+                      </option>
+                      <option style="font-size: 14px" value="20">
+                        &nbsp;&nbsp;Khoa Phẫu Thuật Mạch Máu
+                      </option>
+                    </select>
+                  </div>
+                  <div class="btn-group mt-3" style="width: 100%">
+                    <select
+                      id="speciality"
+                      class="form-control ng-pristine ng-untouched ng-valid ng-not-empty"
+                      ng-init="selectedSpeciality='0'"
+                      ng-model="selectedSpeciality"
+                      ng-change="searchDoctors()"
+                    >
+                      <option
+                        style="font-size: 14px"
+                        value="0"
+                        selected="selected"
+                      >
+                        Chọn nơi đến
+                      </option>
+                      <option disabled="" style="font-size: 14px" value="669">
+                        Chuyên khoa trị liệu thần kinh cột sống ACC
+                      </option>
+                      <option disabled="" style="font-size: 14px" value="665">
+                        Dịch vụ COVID-19
+                      </option>
+                      <option style="font-size: 14px" value="666">
+                        &nbsp;&nbsp;Khoa điều trị COVID-19
+                      </option>
+                      <option disabled="" style="font-size: 14px" value="5">
+                        Các Chuyên Khoa Nội
+                      </option>
+                      <option style="font-size: 14px" value="6">
+                        &nbsp;&nbsp;Khoa Cấp Cứu
+                      </option>
+                      <option style="font-size: 14px" value="14">
+                        &nbsp;&nbsp;Khoa Gây Mê Hồi Sức
+                      </option>
+                      <option style="font-size: 14px" value="10">
+                        &nbsp;&nbsp;Chuyên Khoa Tim
+                      </option>
+                      <option style="font-size: 14px" value="16">
+                        &nbsp;&nbsp;Khoa Tâm lý Lâm Sàng
+                      </option>
+                      <option style="font-size: 14px" value="11">
+                        &nbsp;&nbsp;Khoa Da Liễu
+                      </option>
+                      <option style="font-size: 14px" value="32">
+                        &nbsp;&nbsp;Khoa Dinh Dưỡng
+                      </option>
+                      <option style="font-size: 14px" value="585">
+                        &nbsp;&nbsp;Trung tâm Điều trị &amp; Chăm sóc Da bằng
+                        Laser FV
+                      </option>
+                      <option style="font-size: 14px" value="12">
+                        &nbsp;&nbsp;Chuyên Khoa Tiêu Hóa &amp; Gan Mật
+                      </option>
+                      <option style="font-size: 14px" value="7">
+                        &nbsp;&nbsp;Khoa Nội Đa Khoa
+                      </option>
+                      <option style="font-size: 14px" value="13">
+                        &nbsp;&nbsp;Trung Tâm Điều Trị Ung Thư Hy Vọng
+                      </option>
+                      <option style="font-size: 14px" value="9">
+                        &nbsp;&nbsp;Khoa Nội
+                      </option>
+                      <option style="font-size: 14px" value="8">
+                        &nbsp;&nbsp;Khoa Nhi và Nhi sơ sinh
+                      </option>
+                      <option style="font-size: 14px" value="15">
+                        &nbsp;&nbsp;Trung tâm Điều trị Đau
+                      </option>
+                      <option style="font-size: 14px" value="663">
+                        &nbsp;&nbsp;Khoa Y Học Cổ Truyền
+                      </option>
+                      <option disabled="" style="font-size: 14px" value="28">
+                        Các Dịch Vụ Hỗ Trợ
+                      </option>
+                      <option style="font-size: 14px" value="29">
+                        &nbsp;&nbsp;Khoa Chẩn Đoán Hình Ảnh
+                      </option>
+                      <option style="font-size: 14px" value="31">
+                        &nbsp;&nbsp;Khoa Xét Nghiệm &amp; Ngân Hàng Máu
+                      </option>
+                      <option style="font-size: 14px" value="30">
+                        &nbsp;&nbsp;Khoa Y Học Hạt Nhân
+                      </option>
+                      <option style="font-size: 14px" value="33">
+                        &nbsp;&nbsp;Khoa Vật Lý Trị Liệu Và Phục Hồi Chức Năng
+                      </option>
+                      <option disabled="" style="font-size: 14px" value="17">
+                        Các chuyên Khoa Ngoại
+                      </option>
+                      <option style="font-size: 14px" value="19">
+                        &nbsp;&nbsp;Khoa Chấn Thương Chỉnh Hình
+                      </option>
+                      <option style="font-size: 14px" value="26">
+                        &nbsp;&nbsp;Viện Thẩm mỹ FV Lifestyle
+                      </option>
+                      <option style="font-size: 14px" value="18">
+                        &nbsp;&nbsp;Khoa Ngoại Tổng Quát
+                      </option>
+                      <option style="font-size: 14px" value="24">
+                        &nbsp;&nbsp;Khoa Nha &amp; Phẫu Thuật Hàm Mặt
+                      </option>
+                      <option style="font-size: 14px" value="27">
+                        &nbsp;&nbsp;Ngoại Thần Kinh Và Can Thiệp Nội Mạch Thần
+                        Kinh
+                      </option>
+                      <option style="font-size: 14px" value="21">
+                        &nbsp;&nbsp;Khoa Sản Phụ khoa Trung tâm điều trị bệnh lý
+                        tuyến vú
+                      </option>
+                      <option style="font-size: 14px" value="25">
+                        &nbsp;&nbsp;Khoa Mắt và Phẫu thuật khúc xạ
+                      </option>
+                      <option style="font-size: 14px" value="23">
+                        &nbsp;&nbsp;Khoa Tai Mũi Họng
+                      </option>
+                      <option style="font-size: 14px" value="22">
+                        &nbsp;&nbsp;Khoa Tiết Niệu &amp; Nam Khoa
+                      </option>
+                      <option style="font-size: 14px" value="20">
+                        &nbsp;&nbsp;Khoa Phẫu Thuật Mạch Máu
+                      </option>
+                    </select>
+                  </div>
+                  <div class="input-group date mt-3">
+                    <input
+                      type="date"
+                      id="depDate"
+                      value="13-06-2022"
+                      class="form-control"
+                    /><span class="input-group-addon"
+                      ><i class="glyphicon glyphicon-th"></i
+                    ></span>
+                  </div>
+                </div>
+
+                <div
+                  class="form-group form__submit closee"
+                  style="margin-top: 20px"
+                >
+                  <button
+                    class="btn btn-success w-100"
+                    ng-click="searchDoctors()"
+                    style="margin-right: 10px"
+                  >
+                    Tìm chuyến
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="napas.jpg" alt="" class="img-fluid h-100" />
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/thanhtoan.css" />
+    <script
+      src="https://kit.fontawesome.com/ece145a5a4.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+rel="stylesheet"
+/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mt-lg-0" href="#">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+              height="15"
+              alt="MDB Logo"
+              loading="lazy"
+            />
+          </a>
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lichtrinh.html">LỊCH TRÌNH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LIÊN HỆ</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+          <!-- Icon -->
+          <a class="text-reset me-3" href="#">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+
+          <!-- Notifications -->
+          <div class="dropdown">
+            <a
+              class="text-reset me-3 dropdown-toggle hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell"></i>
+              <span class="badge rounded-pill badge-notification bg-danger"
+                >1</span
+              >
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">Some news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Avatar -->
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuAvatar"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                class="rounded-circle"
+                height="25"
+                alt="Black and White Portrait of a Man"
+                loading="lazy"
+              />
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuAvatar"
+            >
+              <li>
+                <a class="dropdown-item" href="thongtincanhan.html">Thông tin cá nhân</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="dangkyhangxe.html">Đăng ký hãng xe</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="signin.html">Đăng xuất</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right elements -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+
+    <img src="img/banner-home.png" alt="" class="img-fluid h-100 w-100" style="background: aliceblue;" />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="humaa bg-whitee">
+            <div class="row">
+              <div class="col-lg-12">
+                <h3>SƠ ĐỒ VỊ TRÍ</h3>
+                <p>
+                  Quý khách chọn vào chỗ cần đặt mua vé trên sơ đồ mô phỏng.
+                </p>
+              </div>
+              <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-sm-4 col-xs-12 col-padding">
+                    <label class="label-normal lagend-red">
+                      Chỗ đang chọn
+                    </label>
+                  </div>
+                  <div class="col-sm-4 col-xs-12 col-padding">
+                    <label class="label-normal lagend-cyan"> Chỗ trống </label>
+                  </div>
+                  <div class="col-sm-4 col-xs-12 col-padding">
+                    <label class="label-normal lagend-gray"> Chỗ đã bán </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="text-center mt-3">TẦNG DƯỚI</h3>
+                <table class="floorSeatMap">
+                  <tbody>
+                    <tr>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-6">
+                <h3 class="text-center mt-3">TẦNG TRÊN</h3>
+                <table class="floorSeatMap">
+                  <tbody>
+                    <tr>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                      <td style="width: 33.33%" class="seat">
+                        <div class="seatAvailable">
+                          <div class="content">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="humaa bg-whitee">
+            <div class="row">
+              <div class="col-md-12">
+                <h3><i class="fa fa-bus"></i> Thông tin chuyến</h3>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-sm-4 col-xs-5 label-normal text-right">
+                Hãng xe:
+              </label>
+              <label
+                class="col-sm-8 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                MẠNH VIỆT
+              </label>
+            </div>
+
+            <div class="row">
+              <label class="col-sm-4 col-xs-5 label-normal text-right">
+                Tuyến:
+              </label>
+              <label
+                class="col-sm-8 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                CHÂU ĐỐC - CẦN THƠ
+              </label>
+            </div>
+            <div class="row">
+              <label class="col-sm-4 col-xs-5 label-normal text-right">
+                Nơi đi:
+              </label>
+              <label
+                class="col-sm-8 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                CHÂU ĐỐC
+              </label>
+            </div>
+            <div class="row">
+              <label class="col-sm-4 col-xs-5 label-normal text-right">
+                Nơi đến:
+              </label>
+              <label
+                class="col-sm-8 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                CẦN THƠ
+              </label>
+            </div>
+            <div class="row">
+              <label class="col-sm-4 col-xs-5 label-normal text-right">
+                Giờ đi:
+              </label>
+              <label
+                class="col-sm-8 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <span class="time"><i class="fa fa-clock-o"> </i> 16:00 </span>
+                14-06-2022
+              </label>
+            </div>
+            <div class="row">
+              <label class="col-sm-4 col-xs-5 label-normal text-right">
+                Giờ đến:
+              </label>
+              <label
+                class="col-sm-8 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <span class="time"><i class="fa fa-clock-o"> </i> 16:00 </span>
+                14-06-2022
+              </label>
+            </div>
+            <div class="row">
+              <label class="col-sm-4 col-xs-5 label-normal text-right">
+                Tổng số vé:
+              </label>
+              <label
+                class="col-sm-8 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                VUI LÒNG CHỌN VỊ TRÍ
+              </label>
+            </div>
+            <div class="row">
+              <label class="col-sm-4 col-xs-5 label-normal text-right">
+                <strong>Tổng cộng:</strong>
+              </label>
+              <label
+                class="col-sm-8 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <strong>VNĐ</strong>
+              </label>
+            </div>
+          </div>
+          <div class="humaa bg-whitee">
+            <div class="row">
+              <div class="col-md-12">
+                <h3><i class="fa fa-group"></i> THÔNG TIN HÀNH KHÁCH</h3>
+              </div>
+            </div>
+
+            <div class="row d-flex align-items-center mb-2">
+              <label class="col-sm-3 col-xs-5 label-normal text-right">
+                Họ tên:
+              </label>
+              <div
+                class="col-sm-9 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <input
+                  name="contactName"
+                  value=""
+                  class="form-control"
+                  placeholder="Nhập họ tên hành khách"
+                />
+              </div>
+            </div>
+            <div class="row d-flex align-items-center mb-2">
+              <label class="col-sm-3 col-xs-5 label-normal text-right">
+                Họ tên:
+              </label>
+              <div
+                class="col-sm-9 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <input
+                  name="contactName"
+                  value=""
+                  class="form-control"
+                  placeholder="Nhập họ tên hành khách"
+                />
+              </div>
+            </div>
+            <div class="row d-flex align-items-center mb-2">
+              <label class="col-sm-3 col-xs-5 label-normal text-right">
+                Điện thoại:
+              </label>
+              <div
+                class="col-sm-9 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <input
+                  name="contactName"
+                  value=""
+                  class="form-control"
+                  placeholder="Nhập số điện thoại liên lạc"
+                />
+              </div>
+            </div>
+            <div class="row d-flex align-items-center mb-2">
+              <label class="col-sm-3 col-xs-5 label-normal text-right">
+                Email:
+              </label>
+              <div
+                class="col-sm-9 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <input
+                  name="contactName"
+                  value=""
+                  class="form-control"
+                  placeholder="Nhập địa chỉ email"
+                />
+              </div>
+            </div>
+            <div class="row d-flex align-items-center mb-2">
+              <label class="col-sm-3 col-xs-5 label-normal text-right">
+                Điểm đón:
+              </label>
+              <div
+                class="col-sm-9 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <input
+                  name="contactName"
+                  value=""
+                  class="form-control"
+                  placeholder="Nhập họ tên hành khách"
+                />
+              </div>
+            </div>
+            <div class="row d-flex align-items-center mb-2">
+              <label class="col-sm-3 col-xs-5 label-normal text-right">
+                Điểm trả:
+              </label>
+              <div
+                class="col-sm-9 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <input
+                  name="contactName"
+                  value=""
+                  class="form-control"
+                  placeholder="Nhập họ tên hành khách"
+                />
+              </div>
+            </div>
+            <div class="row d-flex align-items-center mb-2">
+              <label class="col-sm-3 col-xs-5 label-normal text-right">
+                Mã bí mật:
+              </label>
+              <div
+                class="col-sm-9 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <input
+                  name="contactName"
+                  value=""
+                  class="form-control"
+                  placeholder="Nhập họ tên hành khách"
+                />
+              </div>
+            </div>
+            <div class="row d-flex align-items-center mb-2">
+              <label class="col-sm-3 col-xs-5 label-normal text-right">
+                Ghi chú:
+              </label>
+              <div
+                class="col-sm-9 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <textarea
+                  rows="4"
+                  name="note"
+                  class="form-control"
+                  placeholder="Ghi chú nếu có cho nhà xe."
+                ></textarea>
+              </div>
+            </div>
+            <div class="row d-flex align-items-center mb-2">
+              <label class="col-sm-3 col-xs-5 label-normal text-right">
+                Khuyến mãi:
+              </label>
+              <div
+                class="col-sm-9 col-xs-7 label-normal text-uppercase col-padding"
+              >
+                <input
+                  name="contactName"
+                  value=""
+                  class="form-control"
+                  placeholder="Nhập mã khuyến mãi"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-3 ">
+              <button
+                id="btnPayment"
+                class="btn btn-primary btn-block"
+                type="button"
+                data-toggle="modal"
+                data-target="#myPaymentOnBooking"
+              >
+                <i class="fa fa-ticket"></i> Thanh toán
+              </button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center ">
+              <button
+                id="btnPayment"
+                class="btn btn-danger btn-block"
+                type="button"
+                data-toggle="modal"
+                data-target="#myPaymentOnBooking"
+              >
+                Hủy vé
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="hr-blue-5 my-3" />
+      <h4 class="text-center">GIÁ THAM KHẢO CÁC TUYẾN ĐƯỜNG</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="http://www.click1bus.com/images/web/city/buon-me-thuot.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <a href="#" class="text-center">
+                <h5><strong>TP. Hồ Chí Minh - Buôn Ma Thuột</strong></h5>
+                <p class="price-refer">230.000 vnđ/vé</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="http://www.click1bus.com/images/web/city/ho-chi-minh.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <a href="#" class="text-center">
+                <h5><strong>TP. Hồ Chí Minh - Buôn Ma Thuột</strong></h5>
+                <p class="price-refer">230.000 vnđ/vé</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="http://www.click1bus.com/images/web/city/da-nang.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <a href="#" class="text-center">
+                <h5><strong>TP. Hồ Chí Minh - Buôn Ma Thuột</strong></h5>
+                <p class="price-refer">230.000 vnđ/vé</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="http://www.click1bus.com/images/web/city/ha-noi.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <a href="#" class="text-center">
+                <h5><strong>TP. Hồ Chí Minh - Buôn Ma Thuột</strong></h5>
+                <p class="price-refer">230.000 vnđ/vé</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="text-center">
+              <li>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-telegram"></i>
+              </li>
+            </ul>
+            <div class="tittle">
+              <p class="text-center text-white">
+                Công ty TNHH SiGlaz Việt Nam. Địa chỉ: 422, Tòa nhà Thiên Sơn
+                Plaza, số 800, Nguyễn Văn Linh, Phường Tân Phú, Quận 7, Tp.Hồ
+                Chí Minh. Điện thoại: (+84)-28-5411-0893 | Fax:
+                (+84)-28-5411-0894. Giấy phép đầu tư số: 1004/GP-HCM, do Ủy Ban
+                Nhân Dân thành phố Hồ Chí Minh cấp ngày 21.12.2005 Giấy chứng
+                nhận đầu tư số: 411043002372, do Ủy Ban Nhân Dân thành phố Hồ
+                Chí Minh cấp ngày 23.10.2013 click1BUS là trang web đặt vé xe
+                khách trực tuyến an toàn và bảo mật; Được xác minh nhận dạng bởi
+                tổ chức quốc tế COMODO.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    </div>
+    <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
+></script>
+  </body>
+</html>

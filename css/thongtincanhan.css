@@ -1,0 +1,24 @@
+header {
+    background-color: #2698d6;
+    width: 100%;
+    margin-top: 30px;
+  }
+  header li {
+    list-style: none;
+  }
+  header li i {
+    margin-right: 10px;
+    margin-top: 20px;
+    font-size: 25px;
+    color: white;
+    
+  }
+  h3 {
+    font-size: 16px;
+    color: #1377bc;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  label{
+    font-size: 14px;
+  }

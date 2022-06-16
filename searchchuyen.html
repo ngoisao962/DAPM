@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ece145a5a4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+rel="stylesheet"
+/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mt-lg-0" href="#">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+              height="15"
+              alt="MDB Logo"
+              loading="lazy"
+            />
+          </a>
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lichtrinh.html">LỊCH TRÌNH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LIÊN HỆ</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+          <!-- Icon -->
+          <a class="text-reset me-3" href="#">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+
+          <!-- Notifications -->
+          <div class="dropdown">
+            <a
+              class="text-reset me-3 dropdown-toggle hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell"></i>
+              <span class="badge rounded-pill badge-notification bg-danger"
+                >1</span
+              >
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">Some news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Avatar -->
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuAvatar"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                class="rounded-circle"
+                height="25"
+                alt="Black and White Portrait of a Man"
+                loading="lazy"
+              />
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuAvatar"
+            >
+              <li>
+                <a class="dropdown-item" href="thongtincanhan.html">Thông tin cá nhân</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="dangkyhangxe.html">Đăng ký hãng xe</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="signin.html">Đăng xuất</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right elements -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="find-a-doctor__quick-search">
+            <div>
+              <h4 style="color: #1377bc">MUA VÉ XE KHÁCH TRỰC TUYẾN</h4>
+              <form class="ng-pristine ng-valid">
+                <div
+                  class="form-group form__medical-speciality"
+                  style="margin-top: 20px"
+                >
+                  <!-- <h5 style="color: #00204a">Chuyên khoa</h5> -->
+                  <div class="btn-group" style="width: 100%">
+                    <select
+                      id="speciality"
+                      class="form-control ng-pristine ng-untouched ng-valid ng-not-empty"
+                      ng-init="selectedSpeciality='0'"
+                      ng-model="selectedSpeciality"
+                      ng-change="searchDoctors()"
+                    >
+                      <option
+                        style="font-size: 14px"
+                        value="0"
+                        selected="selected"
+                      >
+                        Chọn nơi đi
+                      </option>
+                     
+                      <option style="font-size: 14px" value="666">
+                        &nbsp;&nbsp;Quãng Nam
+                      </option>
+                    
+                      <option style="font-size: 14px" value="6">
+                        &nbsp;&nbsp;Quãng Ngãi
+                      </option>
+                      <option style="font-size: 14px" value="14">
+                        &nbsp;&nbsp;Hà Nội
+                      </option>
+                      <option style="font-size: 14px" value="10">
+                        &nbsp;&nbsp;Đà Nẵng
+                      </option>
+                   
+                    </select>
+                  </div>
+                  <div class="btn-group mt-3" style="width: 100%">
+                    <select
+                      id="speciality"
+                      class="form-control ng-pristine ng-untouched ng-valid ng-not-empty"
+                      ng-init="selectedSpeciality='0'"
+                      ng-model="selectedSpeciality"
+                      ng-change="searchDoctors()"
+                    >
+                      <option
+                        style="font-size: 14px"
+                        value="0"
+                        selected="selected"
+                      >
+                        Chọn nơi đến
+                      </option>
+                      <option style="font-size: 14px" value="666">
+                        &nbsp;&nbsp;Quãng Nam
+                      </option>
+                    
+                      <option style="font-size: 14px" value="6">
+                        &nbsp;&nbsp;Quãng Ngãi
+                      </option>
+                      <option style="font-size: 14px" value="14">
+                        &nbsp;&nbsp;Hà Nội
+                      </option>
+                      <option style="font-size: 14px" value="10">
+                        &nbsp;&nbsp;Đà Nẵng
+                      </option>
+                    </select>
+                  </div>
+                  <div class="input-group date mt-3">
+                    <input
+                      type="date"
+                      id="depDate"
+                      value="13-06-2022"
+                      class="form-control"
+                    /><span class="input-group-addon"
+                      ><i class="glyphicon glyphicon-th"></i
+                    ></span>
+                  </div>
+                </div>
+
+                <div
+                  class="form-group form__submit closee"
+                  style="margin-top: 20px"
+                >
+                  <button
+                    class="btn btn-success w-100"
+                    ng-click="searchDoctors()"
+                    style="margin-right: 10px"
+                  >
+                    Tìm chuyến
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="img/napas.jpg" alt="" class="img-fluid h-100" />
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-md-12">
+            <h4 style="font-size: 16px; color:#666">Tuyến <strong class="text-blue">CHÂU ĐỐC</strong > đi <strong class="text-blue">CẦN THƠ</strong> ngày <span><input class="form-controll" type="date" /></span> </h4>
+            
+        </div>
+      </div>
+      <table class="table table-bordered text-center">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">GIỜ ĐI</th>
+            <th scope="col">GIỜ ĐẾN</th>
+            <th scope="col">CHỖ TRỐNG</th>
+            <th scope="col">LOẠI XE</th>
+            <th scope="col">GIÁ</th>
+            <th scope="col">ĐẶT VÉ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>
+              <i class="fa fa-clock-o"></i> <span class="time">04:00</span>
+              <br />
+              15-06-2022
+            </th>
+            <th>
+              <i class="fa fa-clock-o"></i> <span class="time">06:30</span>
+              <br />
+              15-06-2022
+            </th>
+            <td>11</td>
+            <td>11</td>
+            <td>120.000 VNĐ/Ghế Limoisine</td>
+            <td>
+              <a class="tna shopcarrt w-100" href="thanhtoan.html">
+                <i class="fa fa-shopping-cart"></i>
+                Đặt vé
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <i class="fa fa-clock-o"></i> <span class="time">04:00</span>
+              <br />
+              15-06-2022
+            </th>
+            <th>
+              <i class="fa fa-clock-o"></i> <span class="time">06:30</span>
+              <br />
+              15-06-2022
+            </th>
+            <td>11</td>
+            <td>11</td>
+            <td>120.000 VNĐ/Ghế Limoisine</td>
+            <td>
+              <a class="tna shopcarrt w-100" href="#">
+                <i class="fa fa-shopping-cart"></i>
+                Đặt vé
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <i class="fa fa-clock-o"></i> <span class="time">04:00</span>
+              <br />
+              15-06-2022
+            </th>
+            <th>
+              <i class="fa fa-clock-o"></i> <span class="time">06:30</span>
+              <br />
+              15-06-2022
+            </th>
+            <td>11</td>
+            <td>11</td>
+            <td>120.000 VNĐ/Ghế Limoisine</td>
+            <td>
+              <a class="tna shopcarrt w-100" href="#">
+                <i class="fa fa-shopping-cart"></i>
+                Đặt vé
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <i class="fa fa-clock-o"></i> <span class="time">04:00</span>
+              <br />
+              15-06-2022
+            </th>
+            <th>
+              <i class="fa fa-clock-o"></i> <span class="time">06:30</span>
+              <br />
+              15-06-2022
+            </th>
+            <td>11</td>
+            <td>11</td>
+            <td>120.000 VNĐ/Ghế Limoisine</td>
+            <td>
+              <a class="tna shopcarrt w-100" href="#">
+                <i class="fa fa-shopping-cart"></i>
+                Đặt vé
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 style="font-size:16px; color:#1377bc">5 ĐIỂM “PHẢI ĐẾN” Ở CẦN THƠ</h3>
+      <p>
+        Cần Thơ là trung tâm của Đồng bằng sông Cửu Long, nằm hiền hoà bên dòng
+        sông Hậu. Cuộc sống nơi đây mang đậm nét của một vùng quê sông nước. Với
+        lợi thế này, Cần Thơ đang là một điểm du lịch hấp dẫn của miền Tây. Hãy
+        cùng chúng tôi điểm qua những nơi “phải đến” của thành phố này nhé.
+      </p>
+
+      <h5 class="mt-3">1. Vườn Cần Thơ</h5>
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="http://www.click1bus.com/images/web/city/cantho_2.jpg"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-md-8">
+          Các vườn du lịch với cây trái trĩu quả thu hút ngày càng đông khách
+          đến thăm. Tới đây, bạn có thể vừa dạo chơi vừa thưởng thức trái cây
+          ngay tại vườn và các loại đặc sản miền quê khác như cá nướng, ốc luộc,
+          v.v. Hiện có rất nhiều vườn cây trái dành cho khách du lịch như Mỹ
+          Khánh, vườn nhà ông Sáu Dương, vườn lan Bình Thuỷ, vườn vòng cung,
+          trên các tuyến sông Phong Ðiền, Phụng Hiệp và nhiều vườn du lịch gia
+          đình khác ở Ô Môn, Thốt Nốt.
+        </div>
+      </div>
+      <h5 class="mt-3">2. Vườn cò Bằng Lăng</h5>
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="http://www.click1bus.com/images/web/city/cantho_3.jpg"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-md-8">
+          Vườn cò Bằng Lăng – một trong những sân chim lớn nhất nơi miệt vườn
+          chín dòng sông. Trên đường từ Cần Thơ về thành phố Long Xuyên (An
+          Giang), qua khỏi thị trấn Thốt Nốt chừng 5km là đến vườn cò Bằng Lăng.
+          Đi dọc theo bờ sông nhỏ, dưới những hàng cây rợp bóng trước một vùng
+          nước trắng mênh mông như biển, đó là ruộng lúa đã gặt xong vào mùa
+          nước nổi. Tại đây, bạn có thể thấy hàng trăm, hàng ngàn, hàng vạn con
+          cò (cò trắng, cò xám, cò đen, cồng cộc) chao cánh và sà xuống những
+          cành trúc la đà, đong đưa theo gió, rối rít gọi đàn…
+        </div>
+      </div>
+      <h5 class="mt-3">3. Nhà cổ Bình Thủy</h5>
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="http://www.click1bus.com/images/web/city/cantho_4.jpg"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-md-8">
+          Ngôi nhà cổ năm gian hai mái, kiến trúc kiểu Pháp được gia đình họ
+          Dương xây vào năm 1870. Kiến trúc nhà kiểu Pháp với nền nhà cao hơn
+          mặt sân 1m; có bốn bậc thang hình cánh cung tao nhã, nối kết nhà với
+          khoảng sân rộng, trần cao, trang trí hoa văn, mở nhiều cửa lớn nhỏ với
+          khung sắt khá đơn giản giúp nhà thông thoáng, mặt tiền trang trí phù
+          điêu đắp nổi… Toàn bộ gạch bông hoa hồng đỏ – đen lát nền nhà với hàng
+          rào sắt đúc bảo vệ khuôn viên đều được đặt và chở từ Pháp sang. Ðây là
+          mẫu nhà cổ hiếm hoi còn sót lại khá nguyên vẹn giúp các nhà nghiên cứu
+          tìm hiểu đời sống sinh hoạt, văn hoá cũng như tiến trình phát triển
+          dưới tác động khác nhau lúc giao thời giữa hai thế kỷ của cư dân
+          ÐBSCL.
+        </div>
+      </div>
+      <h5 class="mt-3">4. Chợ cổ Cần Thơ</h5>
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="http://www.click1bus.com/images/web/city/cantho_7.jpg"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-md-8">
+          Chợ Cổ Cần Thơ hay gọi là chợ Hàng Dương hay “chợ lục tỉnh”, nằm trên
+          đường Hai Bà Trưng. Chợ này được xây dựng cùng thời với hai ngôi chợ
+          lớn ở Sài Gòn là chợ Bến Thành và chợ Bình Tây. Chợ có một nét rất
+          riêng, rất độc đáo của đồng bằng châu thổ.. đêm đêm ghe chở sản vật từ
+          vùng sâu ra, treo đèn trước mũi lấp lánh cả một khúc sông. Gần đây
+          Thành phố Cần Thơ đã có dự án quy hoạch lại khu chợ cổ Cần Thơ với bến
+          tàu du lịch, nhà chờ, gian hàng lưu niệm cho du khách…. Vị trí: Đường
+          Hai Bà Trưng, TP. Cần Thơ.
+        </div>
+      </div>
+      <h5 class="mt-3">5. Chùa Nam Nhã</h5>
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="http://www.click1bus.com/images/web/city/cantho_6.jpg"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-md-8">
+          Chùa do ông Nguyễn Giác Nguyên đứng ra xây dựng năm 1895, theo tông
+          phái Minh Sư nên còn được gọi là chùa Minh Sư. Trước đây, Chùa Nam Nhã
+          là tiệm thuốc bắc Nam Nhã Đường và là nơi liên lạc, hội họp của các sĩ
+          phu trong phong trào đấu tranh chống Pháp. Chùa Nam Nhã là nơi hoạt
+          động của những sĩ phu yêu nước trong tổ chức Việt Nam Quang Phục hội.
+          Năm 1917, chùa được trùng tu. Sân chùa rộng rãi trồng nhiều cây, giữa
+          sân là hòn non bộ cao hơn 2m. Trong chính điện có bàn thờ sư cụ Giác
+          Nguyên, Lịch Đại Tổ sư, ban thờ Tam giáo với ba pho tượng bằng đồng là
+          tượng Đức Phật Thích Ca, Đức Khổng Tử và tượng Lão Tử. Hai bên chính
+          điện là hai ngôi nhà 5 gian dành cho phái nam và phái nữ ở. Phía sau
+          là khu vườn mộ, nơi yên nghỉ của những người tham gia phong trào Đông
+          Du và xây dựng chùa. Đến đây bạn không chỉ thưởng thức vẻ đẹp cổ kính,
+          trang nghiêm của chùa, mà còn có thể tìm hiểu những hoạt động sôi nổi
+          của các sĩ phu yêu nước phong trào Đông Du, Đặc ủy Hậu Giang, Xứ ủy
+          Nam Kỳ trong những năm đầu khó khăn gian khổ của cách mạng Việt Nam.
+          Vị trí: 612 đường Cách Mạng Tháng Tám, phường An Thới, quận Bình Thủy,
+          TP Cần Thơ.
+        </div>
+      </div>
+      <hr class="hr-blue-5 my-3" />
+      <h4 class="text-center">GIÁ THAM KHẢO CÁC TUYẾN ĐƯỜNG</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="http://www.click1bus.com/images/web/city/buon-me-thuot.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <a href="#" class="text-center">
+                <h5><strong>TP. Hồ Chí Minh - Buôn Ma Thuột</strong></h5>
+                <p class="price-refer">230.000 vnđ/vé</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="http://www.click1bus.com/images/web/city/ho-chi-minh.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <a href="#" class="text-center">
+                <h5><strong>TP. Hồ Chí Minh - Buôn Ma Thuột</strong></h5>
+                <p class="price-refer">230.000 vnđ/vé</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="http://www.click1bus.com/images/web/city/da-nang.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <a href="#" class="text-center">
+                <h5><strong>TP. Hồ Chí Minh - Buôn Ma Thuột</strong></h5>
+                <p class="price-refer">230.000 vnđ/vé</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="http://www.click1bus.com/images/web/city/ha-noi.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <a href="#" class="text-center">
+                <h5><strong>TP. Hồ Chí Minh - Buôn Ma Thuột</strong></h5>
+                <p class="price-refer">230.000 vnđ/vé</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="text-center">
+              <li>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-telegram"></i>
+              </li>
+            </ul>
+            <div class="tittle">
+              <p class="text-center text-white">
+                Công ty TNHH SiGlaz Việt Nam. Địa chỉ: 422, Tòa nhà Thiên Sơn
+                Plaza, số 800, Nguyễn Văn Linh, Phường Tân Phú, Quận 7, Tp.Hồ
+                Chí Minh. Điện thoại: (+84)-28-5411-0893 | Fax:
+                (+84)-28-5411-0894. Giấy phép đầu tư số: 1004/GP-HCM, do Ủy Ban
+                Nhân Dân thành phố Hồ Chí Minh cấp ngày 21.12.2005 Giấy chứng
+                nhận đầu tư số: 411043002372, do Ủy Ban Nhân Dân thành phố Hồ
+                Chí Minh cấp ngày 23.10.2013 click1BUS là trang web đặt vé xe
+                khách trực tuyến an toàn và bảo mật; Được xác minh nhận dạng bởi
+                tổ chức quốc tế COMODO.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
+></script>
+  </body>
+</html>
