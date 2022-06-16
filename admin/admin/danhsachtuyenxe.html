@@ -12,16 +12,16 @@
     <title>SB Admin - Dashboard</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Page level plugin CSS-->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="../css/sb-admin.css" rel="stylesheet">
 
   </head>
 
@@ -156,7 +156,7 @@
             <li class="breadcrumb-item">
               <a href="#">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">khach-hang</li>
+            <li class="breadcrumb-item active">lo-trinh</li>
           </ol>
 
           <!-- Icon Cards-->
@@ -167,19 +167,19 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Khách hàng</div>
+              Lộ trình</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Tên chủ hãng xe</th>
+                      <th>Điểm đi</th>
+                      <th>Điểm đến</th>
+                      <th>Thời gian khởi hành</th>
+                      <th>Thời gian kết thúc</th>
                       <th>Hãng xe</th>
-                      
-                      <th>Địa chỉ trụ sở</th>
                       <th style="text-align: center;">Duyệt</th>
-                      <th style="text-align: center;">Sửa</th>
                       <th style="text-align: center;">Xóa</th>
                     </tr>
                   </thead>
@@ -187,35 +187,36 @@
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Võ Trần Anh Vũ</td>
-                      <td>0789583320</td>
-                      <td>Quãng Nam</td>
-                      <td><button class="btn btn-primary w-100">Duyệt</button></td>
+                      <td>TP.HCM</td>
+                      <td>Quảng Ngãi</td>
+                      <td>12:30</td>
+                      <td>04:00</td>
+                      <td>ACE</td>
                       <td style="text-align: center;">
-                        <a href="a"><i class="fas fa-edit"></i></a>
+                        <a href=""><i class="fas fa-edit"></i>Duyệt</a>
                         </td>
-                      <td style="text-align: center;">
-                        <a href="#"><i class="fas fa-trash"></i></a>
-                      </td>
+                    <td style="text-align: center;">
+                      <a href="#"><i class="fas fa-trash">Xóa</i></a>
+                    </td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>Lương văn chương</td>
-                        <td>0789583320</td>
-                        <td>Quãng Nam</td>
-                        <td><button class="btn btn-primary w-100">Duyệt</button></td>
+                        <td>2</td>
+                        <td>TP.HCM</td>
+                        <td>Quảng Ngãi</td>
+                        <td>12:30</td>
+                        <td>04:00</td>
+                        <td>BCF</td>
                         <td style="text-align: center;">
-                          <a href="a"><i class="fas fa-edit"></i></a>
-                          </td>
+                            <a href=""><i class="fas fa-edit"></i>Duyệt</a>
+                            </td>
                         <td style="text-align: center;">
-                          <a href="#"><i class="fas fa-trash"></i></a>
+                          <a href="#"><i class="fas fa-trash">Xóa</i></a>
                         </td>
                       </tr>
-                    
                 </table>
               </div>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+           
           </div>
 
         </div>
@@ -261,23 +262,23 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="../vendor/chart.js/Chart.min.js"></script>
+    <script src="../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
+    <script src="../js/sb-admin.min.js"></script>
 
     <!-- Demo scripts for this page-->
-    <script src="js/demo/datatables-demo.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="../js/demo/datatables-demo.js"></script>
+    <script src="../js/demo/chart-area-demo.js"></script>
 
   </body>
 

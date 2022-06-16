@@ -12,19 +12,23 @@
     <title>SB Admin - Dashboard</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Page level plugin CSS-->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="../css/sb-admin.css" rel="stylesheet">
 
   </head>
-
+  <style>
+    th,td{
+      font-size: 14px;
+    }
+  </style>
   <body id="page-top">
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
@@ -99,65 +103,52 @@
           </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Chuyến xe</span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="Chuyenxe.html">Danh sách chuyến</a>
-            <a class="dropdown-item" href="add_Chuyenxe.html">Thêm chuyến</a>
-          </div>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="Chuyenxe.html">
+              <i class="fas fa-fw fa-folder"></i>
+              <span>Chuyến xe</span></a>
+          </li>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="dklotrinh.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Lộ trình</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="vexe.html">
+          <a class="nav-link" href="hangxe.html">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Vé xe</span></a>
+            <span>Hãng xe</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="khachhang.html">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Khách hàng</span></a>
+            <span>Người dùng</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="taixe.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Tài xế</span></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Lộ trình</span>
+            <span>Tuyến xe</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="lotrinh.html">Danh sách lộ trình</a>
-            <a class="dropdown-item" href="add_lotrinh.html">Thêm loại lộ trình</a>
+            <a class="dropdown-item" href="lotrinh.html">DS Tuyến xe</a>
+            <a class="dropdown-item" href="danhsachtuyenxe.html">DS Đăng ký tuyến xe</a>
+            <a class="dropdown-item" href="add_lotrinh.html">Đăng ký tuyến xe</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="xe.html">
             <i class="fas fa-fw fa-table"></i>
             <span>Xe</span></a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Trạm dừng</span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="tramdungchan.html">Danh sách trạm dừng</a>
-            <a class="dropdown-item" href="add_tramdungchan.html">Thêm trạm dừng</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Nhân viên</span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="nhanvien.html">Danh sách danh sách</a>
-            <a class="dropdown-item" href="#">Thêm nhân viên</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Thống kê</span></a>
-        </li>
+        
+       
       </ul>
 
       <div id="content-wrapper">
@@ -169,7 +160,7 @@
             <li class="breadcrumb-item">
               <a href="#">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">nhan-vien</li>
+            <li class="breadcrumb-item active">khach-hang</li>
           </ol>
 
           <!-- Icon Cards-->
@@ -180,59 +171,67 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Nhân viên</div>
-            <div class="card-body">
+              Khách hàng</div>
+            <div class=" container-fluid card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered text-center"  width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>ID</th>
-                      <th>Họ & tên</th>
-                      <th>SĐT</th>
-                      <th>Địa chỉ</th>
-                      <th>Chức Vụ</th>
+                      
+                      <th>Mã Tài xế</th>
+                      <th>Họ tên</th>
+                      <th>Chức vụ</th>
+                      <th>Xe</th>
+                    
                       <th style="text-align: center;">Chỉnh sửa</th>
                       <th style="text-align: center;">Xóa</th>
                     </tr>
                   </thead>
-                  <tfoot>
-                    <tr>
-                        <th>ID</th>
-                        <th>Họ & tên</th>
-                        <th>SĐT</th>
-                        <th>Địa chỉ</th>
-                        <th>Chức Vụ</th>
-                        <th style="text-align: center;">Chỉnh sửa</th>
-                        <th style="text-align: center;">Xóa</th>
-                      </tr>
-                  </tfoot>
+                 
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td>Võ Trần Anh Vũ</td>
-                      <td>0789583320</td>
-                      <td>Đặng Thức Vịnh</td>
-                      <td>Nhân viên bán vé</td>
+                      
+                      <td>ST001</td>
+                      <td>Nguyễn Văn A</td>
+                      <td>Tài xế chính</td>
+                      <td>001 - 43A 123 456</td>
+                      
                       <td style="text-align: center;">
-                        <a href="#"><i class="fas fa-edit"></i></a>
+                        <a href="add_taixe.html"><i class="fas fa-edit"></i></a>
                         </td>
                       <td style="text-align: center;">
                         <a href="#"><i class="fas fa-trash"></i></a>
                       </td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>Võ Trần Anh Vũ</td>
-                        <td>0789583320</td>
-                        <td>Đặng Thức Vịnh</td>
-                        <td>Nhân viên bán vé</td>
+                      
+                        <td>ST001</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>Tài xế chính</td>
+                        <td>001 - 43A 123 456</td>
+                        
                         <td style="text-align: center;">
-                          <a href="#"><i class="fas fa-edit"></i></a>
+                          <a href="a"><i class="fas fa-edit"></i></a>
                           </td>
                         <td style="text-align: center;">
                           <a href="#"><i class="fas fa-trash"></i></a>
                         </td>
                       </tr>
+                      <tr>
+                      
+                        <td>ST001</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>Tài xế chính</td>
+                        <td>001 - 43A 123 456</td>
+                        
+                        <td style="text-align: center;">
+                          <a href="a"><i class="fas fa-edit"></i></a>
+                          </td>
+                        <td style="text-align: center;">
+                          <a href="#"><i class="fas fa-trash"></i></a>
+                        </td>
+                      </tr>
+                   
                 </table>
               </div>
             </div>
@@ -282,23 +281,23 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="../vendor/chart.js/Chart.min.js"></script>
+    <script src="../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
+    <script src="../js/sb-admin.min.js"></script>
 
     <!-- Demo scripts for this page-->
-    <script src="js/demo/datatables-demo.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="../js/demo/datatables-demo.js"></script>
+    <script src="../js/demo/chart-area-demo.js"></script>
 
   </body>
 

@@ -12,20 +12,17 @@
     <title>SB Admin - Dashboard</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Page level plugin CSS-->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
-    <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
-  rel="stylesheet"
-/>
+    <link href="../css/sb-admin.css" rel="stylesheet">
+
   </head>
 
   <body id="page-top">
@@ -95,28 +92,56 @@
 
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
-        
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+         
+          <li class="nav-item">
+            <a class="nav-link" href="Chuyenxe.html">
+              <i class="fas fa-fw fa-folder"></i>
+              <span>Chuyến xe</span></a>
+          </li>
+        </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="nv_thongtin.html">
+          <a class="nav-link" href="dklotrinh.html">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Thông tin cá nhân</span></a>
+            <span>Lộ trình</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="hangxe.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Hãng xe</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="khachhang.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Người dùng</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="taixe.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Tài xế</span></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Bến xe</span>
+            <span>Tuyến xe</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="nv_vaoben.html">Xe vào bến</a>
-            <a class="dropdown-item" href="nv_raben.html">Xe ra bến</a>
-           
+            <a class="dropdown-item" href="lotrinh.html">DS Tuyến xe</a>
+            <a class="dropdown-item" href="danhsachtuyenxe.html">DS Đăng ký tuyến xe</a>
+            <a class="dropdown-item" href="add_lotrinh.html">Đăng ký tuyến xe</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="nv_vexe.html">
+          <a class="nav-link" href="xe.html">
             <i class="fas fa-fw fa-table"></i>
-            <span>Vé Xe</span></a>
+            <span>Xe</span></a>
         </li>
         
        
@@ -143,102 +168,53 @@
             <div class="card-header">
               <i class="fas fa-table"></i>
               Chuyến xe</div>
-              <div class="row mt-4">
-                <div class="col-md-3">
-                    <img src="https://meta.vn/Data/image/2021/09/22/anh-meo-cute-de-thuong-dang-yeu-44.jpg" class="img-fluid rounded ml-3" alt="">
-                </div>
-                <div class="col-md-9">
-                    <div class="container ">
-                        <form>
-                          <!-- 2 column grid layout with text inputs for the first and last names -->
-                        
-                          <div class="row mb-4">
-                            <div class="col">
-                              <div class="form-outline">
-                                <input type="text" id="form6Example1" class="form-control" />
-                                <label class="form-label" for="form6Example1">Họ tên</label>
-                              </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-outline">
-                                  <input type="text" id="form6Example1" class="form-control" />
-                                  <label class="form-label" for="form6Example1">Số điện thoại</label>
-                                </div>
-                              </div>
-                            
-                          </div>
-                          <div class="row mb-4">
-                            <div class="col">
-                              <div class="form-outline">
-                                <input type="text" id="form6Example1" class="form-control" />
-                                <label class="form-label" for="form6Example1">CMND/CCCD</label>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="form-outline">
-                                <input type="text" id="form6Example2" class="form-control" />
-                                <label class="form-label" for="form6Example2">Tuyến xe</label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row mb-4">
-                            <div class="col">
-                              <div class="form-outline">
-                                <input type="text" id="form6Example1" class="form-control" />
-                                <label class="form-label" for="form6Example1">Biển số xe</label>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="form-outline">
-                                <input type="number" id="form6Example2" class="form-control" />
-                                <label class="form-label" for="form6Example2">Vị trí đỗ</label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row mb-4">
-                            <div class="col">
-                              <div class="form-outline">
-                                <input type="time" id="form6Example1" class="form-control" />
-                               
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="form-outline">
-                                <input type="number" id="form6Example2" class="form-control" />
-                                <label class="form-label" for="form6Example2">Ngày</label>
-                              </div>
-                            </div>
-                           
-                          </div>
-                        
-                          <!-- Text input -->
-                          <div class="form-outline mb-4">
-                            <input type="text" id="form6Example3" class="form-control" />
-                            <label class="form-label" for="form6Example3">Điểm khởi hành</label>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-12">
-                              <button type="submit" class="btn btn-primary btn-block mb-4">Xuất vé khách hàng</button>
-                            </div>
-                           
-                           </div>
-                          </div>
-                          
-                        
-                          <!-- Text input -->
-                  
-                         
-                        
-                         
-            
-                
-                          <!-- Submit button -->
-                       
-                        </form>
-                      </div>
-                </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Mã số xe</th>
+                      <th>Tuyến</th>
+                      <th>Biển số xe</th>
+                      
+                      <th style="text-align: center;">Chỉnh sửa</th>
+                      <th style="text-align: center;">Xóa</th>
+                    </tr>
+                  </thead>
+              
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>ST001</td>
+                      <td>Đà Nẵng- Bình Định</td>
+                      <td>43 M1-12345</td>
+                      
+                      <td style="text-align: center;">
+                        <a href="add_Chuyenxe.html"><i class="fas fa-edit"></i></a>
+                        </td>
+                      <td style="text-align: center;">
+                        <a href="#"><i class="fas fa-trash"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>ST002</td>
+                      <td>Đà Nẵng- Bình Định</td>
+                      <td>43 M1-14445</td>
+                      
+                      <td style="text-align: center;">
+                        <a href="add_Chuyenxe.html"><i class="fas fa-edit"></i></a>
+                        </td>
+                      <td style="text-align: center;">
+                        <a href="#"><i class="fas fa-trash"></i></a>
+                      </td>
+                    </tr>
+                </table>
+                <button class="btn btn-danger ">Duyệt</button>
+              </div>
             </div>
-          
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div>
 
         </div>
@@ -284,27 +260,24 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="../vendor/chart.js/Chart.min.js"></script>
+    <script src="../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
+    <script src="../js/sb-admin.min.js"></script>
 
     <!-- Demo scripts for this page-->
-    <script src="js/demo/datatables-demo.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
-></script>
+    <script src="../js/demo/datatables-demo.js"></script>
+    <script src="../js/demo/chart-area-demo.js"></script>
+
   </body>
 
 </html>

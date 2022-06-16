@@ -12,16 +12,16 @@
     <title>SB Admin - Dashboard</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Page level plugin CSS-->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="../css/sb-admin.css" rel="stylesheet">
 
   </head>
 
@@ -146,7 +146,6 @@
         
        
       </ul>
-
       <div id="content-wrapper">
 
         <div class="container-fluid">
@@ -165,55 +164,50 @@
 
           <!-- DataTables Example -->
           <div class="card mb-3">
-            <div class="card-header">
-              <i class="fas fa-table"></i>
-              Lộ trình</div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Điểm đi</th>
-                      <th>Điểm đến</th>
-                      <th>Thời gian khởi hành</th>
-                      <th>Thời gian kết thúc</th>
-                   
-                      <th style="text-align: center;">Xóa</th>
-                    </tr>
-                  </thead>
-                 
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>TP.HCM</td>
-                      <td>Quảng Ngãi</td>
-                      <td>12:30</td>
-                      <td>04:00</td>
-                     
-                      <td style="text-align: center;">
-                        <a href="#"><i class="fas fa-trash"></i></a>
-                      </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>TP.HCM</td>
-                        <td>Quảng Ngãi</td>
-                        <td>12:30</td>
-                        <td>04:00</td>
-                       
-                        <td style="text-align: center;">
-                          <a href="#"><i class="fas fa-trash"></i></a>
-                        </td>
-                      </tr>
-                </table>
-              </div>
-            </div>
-           
-          </div>
+            <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Lộ trình</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form">
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">ID</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Điểm đi</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Điểm đi">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Điểm đến</label>
+                        <input type="text" min="1" name="row" class="form-control" placeholder="Điểm đến">
+                      </div>
 
-        </div>
-        <!-- /.container-fluid -->
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Thời gian khởi hành</label>
+                        <input type="time" class="form-control" id="exampleInputEmail1" placeholder="Thơ">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Thời gian kết thúc</label>
+                        <input type="time" class="form-control" id="exampleInputEmail1" placeholder="Loại vé">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Hãng xe</label>
+                        <input type="text" min="1" name="row" class="form-control" placeholder="Điểm đến">
+                      </div>
+                      
+                  </div>
+                  <!-- /.card-body -->
+  
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Thêm tuyến xe</button>
+                    <button type="submit" class="btn btn-primary">Hủy</button>
+                  </div>
+                </form>
+              </div>
+          </div >
 
         <!-- Sticky Footer -->
         <footer class="sticky-footer">
@@ -255,23 +249,23 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="../vendor/chart.js/Chart.min.js"></script>
+    <script src="../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
+    <script src="../js/sb-admin.min.js"></script>
 
     <!-- Demo scripts for this page-->
-    <script src="js/demo/datatables-demo.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="../js/demo/datatables-demo.js"></script>
+    <script src="../js/demo/chart-area-demo.js"></script>
 
   </body>
 
