@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="../total.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+  
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+              <img
+                src="https://storage.googleapis.com/goyolo-production/logo.png"
+                height="30"
+                alt="MDB Logo"
+                loading="lazy"
+              />
+            </a>
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="tx_index.html">TRANG CHỦ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tx_dslichtrinh.html">LỊCH TRÌNH</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tx_lienhe.html">LIÊN HỆ</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+  
+          <!-- Right elements -->
+          <div class="d-flex align-items-center">
+            <!-- Icon -->
+            <a class="text-reset me-3" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+  
+            <!-- Notifications -->
+            <div class="dropdown">
+              <a
+                class="text-reset me-3 dropdown-toggle hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger"
+                  >1</span
+                >
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">Some news</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another news</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Avatar -->
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuAvatar"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                  class="rounded-circle"
+                  height="25"
+                  alt="Black and White Portrait of a Man"
+                  loading="lazy"
+                />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuAvatar"
+              >
+                <li>
+                  <a class="dropdown-item" href="tx_thongtincanhan.html"
+                    >Thông tin cá nhân</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="tx_hotro.html"
+                    >Yêu cầu hỗ trợ</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="tx_dangkyhangxe.html">Đăng ký hãng xe</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Đăng xuất</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+    <div class="container py-5 my-5  khung">
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Đà Nẵng</option>
+            <option value="1">Hà Nội</option>
+            <option value="2">Sài Gòn</option>
+            <option value="3">Huế</option>
+          </select>
+        </div>
+        <div class="col-md-1 mb-3">
+          <button class="btn  btn-block text-white" style="background-color: rgb(18, 168, 166);">⇒</button>
+        </div>
+        <div class="col-md-3 mb-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Hải Dương</option>
+            <option value="1">Bình Dương</option>
+            <option value="2">Hải Phòng</option>
+            <option value="3">Cà Mau</option>
+          </select>
+        </div>
+        <div class="col md-3 mb-3">
+          <input
+            type="date"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="col-md-2">
+          <button class="btn  btn-block text-white" style="background-color: rgb(18, 168, 166);">Tìm kiếm</button>
+        </div>
+      </div>
+    </div>
+   <div class="tong">
+    <div class="container">
+        <div class="row  ">
+            <div class="col-md-9">
+                <div class="row bg-white my-3 p-3 rounded" style="align-items: center;">
+                  <div class="col-md-4">
+                      <img src="https://static.vexere.com/c/i/533/xe-tam-minh-phuong-VeXeRe-ZzKpWxJ-1000x600.jpeg" class="img-fluid rounded" alt="">
+                  </div>
+                  <div class="col-md-8 my-3">
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 MuiGrid-grid-md-8 css-1blvutw"
+                    >
+                      <div class="css-1ve4syd">
+                        <span
+                          class="MuiTypography-root MuiTypography-contentBold css-7l3pp7"
+                          >07:30</span
+                        >
+                        <div class="MuiBox-root css-xuc64d">
+                          <div class="css-5bsd9c">
+                            <span
+                              class="MuiTypography-root MuiTypography-caption css-1uqcgcc"
+                              >17h20p</span
+                            >
+                            <div class="css-17z0ye3">
+                              <div isleft="true" class="css-rr8c2q"></div>
+                              <div class="css-178so5c"></div>
+                              <div class="css-4nu849"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <span
+                          class="MuiTypography-root MuiTypography-contentBold css-7l3pp7"
+                          >00:50</span
+                        >
+                      </div>
+                      <div class="css-1f82glh">
+                        <span
+                          class="MuiTypography-root MuiTypography-contentRegular css-9g58cr"
+                          >Bến xe Miền Đông</span
+                        ><span
+                          class="MuiTypography-root MuiTypography-contentRegular css-1ivan3w"
+                          >Bến xe Đức Long Đà Nẵng</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row py-4 bg-white rounded mb-3 p-3">
+                    <div class="col-md-7">
+                        <h4>Chọn chỗ - Giường nằm</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://goyolo.com/images/not-seleced.png" class="img-fluid" width="18px" alt="">
+                                Không thể chọn
+                            </div>
+                            <div class="col-md-6">
+                                <img src="https://goyolo.com/images/seleced.png" class="img-fluid" width="18px" alt="">
+                                Đang chọn
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="text-center mb-3">Tầng dưới</h5>
+                                <div class="row">
+                                    <div class="col ">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col">
+                                      <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                  </div>
+                                  <div class="col">
+                                      <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                  </div>
+                                  <div class="col">
+                                      <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                  </div>
+                              </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-center mb-3">Tầng trên</h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                </div>
+                              
+                                <div class="row">
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col">
+                                      <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                  </div>
+                                  <div class="col">
+                                      <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                  </div>
+                                  <div class="col">
+                                      <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#D5DADD" stroke="#EEF2F4" stroke-width="1.5" stroke-linejoin="round"></rect><path d="m18.96 11.46-1.42-1.42L14 13.59l-3.54-3.55-1.42 1.42L12.59 15l-3.55 3.54 1.42 1.42L14 16.41l3.54 3.55 1.42-1.42L15.41 15l3.55-3.54Z" fill="#EEF2F4"></path></svg>
+                                  </div>
+                              </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    <div class="col">
+                                        <svg width="28" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" class="bed"><rect x="2.75" y="2.75" width="22.5" height="34.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect><rect x="5.75" y="27.75" width="16.5" height="6.5" rx="1.25" fill="#fff" stroke="#425062" stroke-width="1.5" stroke-linejoin="round"></rect></svg>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-4 bg-white rounded mb-3 p-3">
+                    <div class="col-md-12">
+                        <div id="carouselExampleCrossfade" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+                            
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="https://static.vexere.com/c/i/533/xe-tam-minh-phuong-VeXeRe-nBVFyDB-1000x600.jpeg" class="d-block img-fluid w-100" height="100px" alt="Wild Landscape"/>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://static.vexere.com/c/i/533/xe-tam-minh-phuong-VeXeRe-ZzKpWxJ-1000x600.jpeg" class="d-block w-100" alt="Camera"/>
+                              </div>
+                           
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCrossfade" data-mdb-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                          <h4 class="my-4">Xe Tâm Minh Phương</h4>
+                          <hr class="MuiDivider-root MuiDivider-fullWidth css-zckr9r">
+                          <div class=" cm">
+                           
+                                <div class="image">
+                                    <img src="https://goyolo.com/images/payment-icon-desktop.png" width="40px" alt="">
+                                </div>
+                           
+                            <div class="nd">
+                                <h5>Không cần trả trước</h5>
+                                <p>Sau khi đặt vé thành công, bạn có thể ra nhà xe thanh toán.
+                                </p>
+                            </div>
+                          </div>
+                          <div class=" cm">
+                           
+                            <div class="image">
+                                <img src="https://goyolo.com/images/cancel-icon-desktop.png" width="40px" alt="">
+                            </div>
+                       
+                        <div class="nd">
+                            <h5>100% chắc chắn có vé</h5>
+                            <p>100% khách đặt vé qua nhà xe này trong 3 tháng gần nhất đều được tài xế đón thành công.
+                            </p>
+                        </div>
+                      </div>
+                      <div class=" cm">
+                           
+                        <div class="image">
+                            <img src="https://goyolo.com/images/pickup-icon-desktop.png" width="40px" alt="">
+                        </div>
+                   
+                    <div class="nd">
+                        <h5>Đón tận nơi</h5>
+                        <p>Nhà xe có hỗ trợ đón khách tận nhà tại một số khu vực nhất định.
+                        </p>
+                    </div>
+                  </div>
+                  <div class=" cm">
+                           
+                    <div class="image">
+                        <img src="https://goyolo.com/images/dropout-icon-desktop.png" width="40px" alt="">
+                    </div>
+               
+                <div class="nd">
+                    <h5>Trả tận nơi</h5>
+                    <p>Nhà xe có hỗ trợ trả khách tận nhà tại một số khu vực nhất định.
+
+                    </p>
+                </div>
+              </div>
+              <hr class="MuiDivider-root MuiDivider-fullWidth css-zckr9r">
+              <h4 class="mb-3">Chính sách nhà xe</h4>
+              <div class="row mt-3 rounded" style="padding: 16px;background: rgb(245, 247, 249);">
+                <div class="col-md-6">
+                    <div class="row" style="align-items: baseline;">
+                        <div class="col-md-1">
+                            <img src="https://goyolo.com/images/money01.png" width="18px" alt="">
+                        </div>
+                        <div class="col-md-11">
+                            <p>Miễn phí hủy vé <strong  data-toggle="modal" data-target="#exampleModalCenter" style="color: rgb(18, 168, 166);cursor: pointer; " >Xem chính sách</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row" style="align-items: baseline;">
+                        <div class="col-md-1">
+                            <img src="https://goyolo.com/images/more.png" width="18px" alt="">
+                        </div>
+                        <div class="col-md-11">
+                            <p>Chính sách khác<strong data-toggle="modal" data-target="#exampleModalCenterr" style="color: rgb(18, 168, 166);cursor: pointer; ">Xem chính sách</strong></p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <hr class="MuiDivider-root MuiDivider-fullWidth css-zckr9r">
+              <h4 class="mb-3">Tiện ích chung</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="cm">
+                    <div class="image">
+                      <img src="https://static.vexere.com/production/utilities/1609838011307.png" width="40px" alt="">
+                  </div>
+             
+              <div class="nd">
+                  <h5>Gửi kèm xe máy</h5>
+                  <p>Nhà xe cho khách gửi kèm theo xe máy
+                  </p>
+              </div>
+                </div>
+                <div class="cm">
+                  <div class="image">
+                    <img src="https://static.vexere.com/production/utilities/1610093150480.png" width="40px" alt="">
+                </div>
+           
+            <div class="nd">
+                <h5>Nước uống</h5>
+                <p>Nhà xe có phục vụ nước cho hành khách
+                </p>
+            </div>
+              </div>
+              <div class="cm">
+                <div class="image">
+                  <img src="https://static.vexere.com/production/utilities/1610093169649.png" width="40px" alt="">
+              </div>
+         
+          <div class="nd">
+              <h5>Chăn đắp</h5>
+              <p>Nhà xe cho khách chăn đề đắp ngủ
+              </p>
+          </div>
+            </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cm">
+                    <div class="image">
+                      <img src="https://static.vexere.com/production/utilities/1609837921462.png" width="40px" alt="">
+                  </div>
+             
+              <div class="nd">
+                  <h5>Nước rửa tay</h5>
+                  <p>Nhà xe có trang bị nước rửa tay diệt khuẩn trước khi lên xe
+                  </p>
+              </div>
+                </div>
+                <div class="cm">
+                  <div class="image">
+                    <img src="https://static.vexere.com/production/utilities/1610093115226.png" width="40px" alt="">
+                </div>
+           
+            <div class="nd">
+                <h5>Gửi kèm xe máy</h5>
+                <p>Nhà xe cho khách gửi kèm theo xe máy
+                </p>
+            </div>
+              </div>
+              <div class="cm">
+                <div class="image">
+                  <img src="	https://static.vexere.com/production/utilities/1609838011307.png" width="40px" alt="">
+              </div>
+         
+          <div class="nd">
+              <h5>Gửi kèm xe máy</h5>
+              <p>Nhà xe cho khách gửi kèm theo xe máy
+              </p>
+          </div>
+            </div>
+                </div>
+              </div>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="col-md-3">
+                <div class="mau bg-white rounded my-3 p-3">
+                  <h4 class="text-center mb-3">Thanh toán</h4>
+                <div class="row">
+                  <div class="col-md-8">
+                    <p>Giường nằm (3BT,3CT)</p>
+                  </div>
+                  <div class="col-md-4">
+                    <P>1.160.000 đ</P>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8">
+                    <p><strong>Tổng tiền</strong></p>
+                  </div>
+                  <div class="col-md-4">
+                    <P><strong>1.160.000 đ</strong></P>
+                  </div>
+                </div>
+                </div>
+                <a href="tt_dd_dt.html" class="bna">Chọn điểm đón/trả</a>
+              </div>
+        </div>
+       
+      </div>
+   </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+
+  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Chính sách hủy vé</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="MuiBox-root css-4zgpz7"><div class="css-15sbzxb"><span class="MuiTypography-root MuiTypography-contentRegular css-109nhb0">Thời gian hủy vé</span><span class="MuiTypography-root MuiTypography-contentRegular css-109nhb0">Phí hủy</span></div><div class="css-15sbzxb"><div class="MuiBox-root css-0"><span class="MuiTypography-root MuiTypography-contentRegular css-109nhb0">Trước <strong>10:00 ngày 20/06/2022</strong></span></div><div class="MuiBox-root css-0"><span class="MuiTypography-root MuiTypography-contentRegular css-1nrgfh">29.000 đ/vé</span></div></div><div class="css-1ec0wjx"><div class="MuiBox-root css-0"><span class="MuiTypography-root MuiTypography-contentRegular css-109nhb0">Sau <strong>10:00 ngày 20/06/2022</strong></span></div><div class="MuiBox-root css-0"><span class="MuiTypography-root MuiTypography-contentRegular css-7hydu4">Không được hủy</span></div></div><div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-standardInfo MuiAlert-standard css-kr0hkf" role="alert"><div class="MuiAlert-icon css-1l54tgj"><div><img width="13px" height="13px" src="https://goyolo.com/images/glyph.png" alt="glyph"></div></div><div class="MuiAlert-message css-1w0ym84"><span class="MuiTypography-root MuiTypography-contentRegular css-1bw24xf">Phí huỷ ước tính cho 1 vé</span><br><span class="MuiTypography-root MuiTypography-contentRegular css-1bw24xf">Giá trị được hoàn = Giá vé - Phí huỷ</span></div></div></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalCenterr" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+
+  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <h4>An toàn Covid-19</h4>
+       <ul>
+        <li>Xuất trình Khai báo Y tế trước khi lên xe và tuân thủ quy tắc 5K của Bộ Y tế khi di chuyển</li>
+        <li>Cung cấp đầy đủ họ tên, số điện thoại, địa chỉ cư trú khi đặt vé</li>
+        <li>Yêu cầu đeo khẩu trang khi lên xe</li>
+        <li>Xuất trình giấy xét nghiệm PCR âm tính có hiệu lực trong vòng time <strong> 1</strong> giờ</li>
+       </ul>
+       <h4>Yêu cầu lên xe</h4>
+       <ul>
+        <li>Có mặt tại văn phòng/quầy vé/bến xe trước 30 phút để làm thủ tục lên xe</li>
+        <li>Xuất trình SMS/Email đặt vé trước khi lên xe</li>
+        <li>Không hút thuốc, uống rượu, sử dụng chất kích thích trên xe</li>
+        <li>Không mang đồ ăn, thức ăn có mùi lên xe</li>
+       </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+    
+<footer class="text-center text-lg-start bg-dark text-muted">
+  <!-- Section: Social media -->
+ 
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="mt-4">
+    <div class="container text-center text-md-start ">
+      <!-- Grid row -->
+      <div class="row pt-4 ">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Company name
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
+    ></script>
+  </body>
+</html>

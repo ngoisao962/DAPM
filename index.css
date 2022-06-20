@@ -1,0 +1,29 @@
+.posti-img{
+    position: relative;
+}
+.where{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.where h1{
+   font-size: 60px;
+    font-weight: 900;
+    font-family: RefrigeratorDeluxe;
+    color: #fff!important;
+    text-transform: uppercase;
+   
+    text-shadow: 1px 1px 1px #65717d;
+   
+}
+.hm{
+    position: relative;
+}
+.hm h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
