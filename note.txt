@@ -1,0 +1,14 @@
+Chức vụ
+1 - nhân viên trực bến 
+2 - nhân viên trực cổng 
+3 - chủ hãng xe 
+4 - khách hàng  
+5 - tài xế (taixe@gmail.com - 123456)
+
+Trang thái
+0 - chưa duyệt
+1 - đã duyệt
+
+
+
+

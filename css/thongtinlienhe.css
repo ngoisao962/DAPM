@@ -1,0 +1,27 @@
+.tong{
+    background-color: rgb(239, 242, 245);
+  
+}
+h5{
+    font-size: 15px;
+}
+p{
+    font-size: 13px;
+}
+.bna{
+    background-color: rgb(18, 168, 166);
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.bna:hover{
+    color: white;
+    text-decoration: none;
+}
+.khung{
+    
+    border-radius: 10px;
+   
+}

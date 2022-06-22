@@ -1,0 +1,9 @@
+.schedule-scroll{
+    overflow-y: scroll;
+   
+}
+.schedule-table{
+   
+    width: inherit;
+    height: 500px;
+}
