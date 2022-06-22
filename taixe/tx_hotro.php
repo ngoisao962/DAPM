@@ -1,3 +1,44 @@
+<?php include('../connect/connect.php'); ?>
+
+<?php
+session_start();
+
+if(!isset($_SESSION['nguoidung'])){
+  header("Location:/DAPM/khachhang/signin.html");
+  exit();
+}
+
+    $sql = $pdo->prepare("SELECT * FROM tblSuCo");
+    $sql->execute();
+    $total = $sql->rowCount();
+    $i = $total + 1;
+
+if(isset($_POST['submit_ycht'])){
+
+  if (!empty($_POST['maCX']) && (!empty($_POST['tenSC']) or !empty($_POST['tenSC_khac'])) && !empty($_POST['chiTietSC'])) {
+
+    if(empty($_POST['tenSC'])){
+      $tenSC = $_POST['tenSC_khac'];
+    }else{
+      $tenSC = $_POST['tenSC'];
+    }
+    $maCX = $_POST['maCX'];
+    $chiTietSC = $_POST['chiTietSC'];
+    $maND = $_SESSION['nguoidung']['maND'];
+
+    $statement = $pdo->prepare("INSERT into tblSuCo(maSC, maCX, maND, tenSC, chiTietSC) value(?,?,?,?,?)");
+    $statement->execute(array($i,$maCX,$maND,$tenSC,$chiTietSC));
+
+
+
+  }else{
+    echo '<script>alert("Gửi thông báo không thành công!! 
+          Vui lòng kiểm tra lại thông tin đã nhập.")</script>';
+  }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -161,16 +202,16 @@
       <!-- Container wrapper -->
     </nav>
     
-   <div class="tong py-3    ">
+   <div class="tong py-3">
     <div class="container mt-5">
         <div class="w-50 m-auto">
           <h3 class="text-center mb-3" style="font-size: 1.2rem;">Báo cáo sự cố</h3>
-          <form>
+          <form action="" method="POST">
             <!-- Name input -->
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline">
-                  <input type="text" id="form6Example1" class="form-control" />
+                  <input type="text" id="form6Example1" class="form-control" name="maCX"/>
                   <label class="form-label" for="form6Example1">Mã chuyến xe</label>
                 </div>
               </div>
@@ -179,19 +220,19 @@
             <div class="row mb-4">
               <div class="col">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="form11Example2"  />
+                  <input class="form-check-input" type="checkbox" value="Xe hỏng" id="form11Example2"  name="tenSC"/>
                   <label class="form-check-label" for="form11Example2"> Xe hỏng </label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="form11Example2" />
+                  <input class="form-check-input" type="checkbox" value="Tắc đường" id="form11Example2" name="tenSC"/>
                   <label class="form-check-label" for="form11Example2"> Tắc đường </label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="form11Example2" />
+                  <input class="form-check-input" type="checkbox" value="Đổi tuyến đường" id="form11Example2" name="tenSC"/>
                   <label class="form-check-label" for="form11Example2"> Đổi tuyến đường </label>
                 </div>
               </div>
@@ -200,11 +241,11 @@
             </div>
             
             <div class="form-outline mb-4">
-              <input type="text" id="form6Example3" class="form-control" />
+              <input type="text" id="form6Example3" class="form-control" name="tenSC_khac"/>
               <label class="form-label" for="form6Example3">Khác</label>
             </div>
             <div class="form-outline mb-4">
-              <textarea class="form-control" id="form4Example3" rows="5"></textarea>
+              <textarea class="form-control" id="form4Example3" rows="5" name="chiTietSC"></textarea>
             <label class="form-label" for="form6Example3">Chi tiết sự cố, giải pháp mong muốn</label>
           </div>
   
@@ -212,7 +253,7 @@
            
   
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4">
+            <button type="submit" class="btn btn-primary btn-block mb-4" name="submit_ycht">
               Yêu cầu hỗ trợ
             </button>
           </form>
